@@ -20,3 +20,14 @@ Insert into EmployeeTable values
 select * from EmployeeTable
 -- UC5 Retrieve salary for particular employee 
 select salary from EmployeeTable where name='Sneha'
+-- --to check  Employee using date
+select * from EmployeeTable where Start_date between '2023-01-01' and getdate ();
+
+--UC6 Add Gender column and update gender in EmployeeTable
+--Add column for gender
+alter table EmployeeTable add Gender char (1)
+--update
+update EmployeeTable set Gender ='F' where name = 'Rutuja'
+--update with id
+update  EmployeeTable set Gender ='M' where ID in(2,3) ;
+update  EmployeeTable set Gender ='F' where ID in(4) ;
