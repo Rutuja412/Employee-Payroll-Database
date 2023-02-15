@@ -18,3 +18,5 @@ Insert into EmployeeTable values
 --UC4 to view table
 
 select * from EmployeeTable
+-- UC5 Retrieve salary for particular employee 
+select salary from EmployeeTable where name='Sneha'
