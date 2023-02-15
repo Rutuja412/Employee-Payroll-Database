@@ -58,3 +58,14 @@ select Max(Salary) as Maximum_Salary_Of_Employee from EmployeeTable
 select Count(Id) as Number_Of_Male_Employees from EmployeeTable where Gender = 'M' GROUP BY Gender
 select Count(Id) as Number_Of_Female_Employees from EmployeeTable where Gender = 'F' GROUP BY Gender
 select Count(Id) as Total_Employees from EmployeeTable
+--UC8 Extend EmployerTable Personal Data
+alter table EmployeeTable add
+PhoneNumber varchar(15), 
+Address varchar(200) not null default 'India',
+Department varchar(200)  
+update EmployeeTable set PhoneNumber = '1234567891', Address = 'Satara', Department = 'IT' WHERE Name = 'Rutuja'
+update EmployeeTable set PhoneNumber = '343434562', Address = 'Mumbai', Department = 'Mechanical' WHERE Name = 'Vikram'
+update EmployeeTable set PhoneNumber = '345678912', Address = 'Pune', Department = 'Electronics' WHERE Name = 'Rohit'
+update EmployeeTable set PhoneNumber = '456789123', Address = 'Kolhaour', Department = 'CS' WHERE Name = 'Sneha'
+select * from EmployeeTable
+
