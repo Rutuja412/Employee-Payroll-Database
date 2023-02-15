@@ -68,4 +68,15 @@ update EmployeeTable set PhoneNumber = '343434562', Address = 'Mumbai', Departme
 update EmployeeTable set PhoneNumber = '345678912', Address = 'Pune', Department = 'Electronics' WHERE Name = 'Rohit'
 update EmployeeTable set PhoneNumber = '456789123', Address = 'Kolhaour', Department = 'CS' WHERE Name = 'Sneha'
 select * from EmployeeTable
-
+--UC9 Extend with Add Deduction,Taxable pay, Income Pay , Netpay
+alter table EmployeeTable add
+Deduction money,
+Taxable_Pay money,
+Income_Tax money,
+Net_Pay money
+select * from EmployeeTable
+Update  EmployeeTable  set Deduction=1000 where Gender='F'
+Update EmployeeTable  set Deduction=2000 where Gender='M'
+Update EmployeeTable  set Net_Pay=500
+Update EmployeeTable  set Taxable_Pay=0,Income_Tax=0
+select * from EmployeeTable
