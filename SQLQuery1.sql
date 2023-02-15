@@ -80,3 +80,5 @@ Update EmployeeTable  set Deduction=2000 where Gender='M'
 Update EmployeeTable  set Net_Pay=500
 Update EmployeeTable  set Taxable_Pay=0,Income_Tax=0
 select * from EmployeeTable
+-- UC10 Adding duplicate entry
+insert into  EmployeeTable values('Rutuja',80000,'2022-04-30','F','12343212','India','Chemical',20000,0,0,0)
