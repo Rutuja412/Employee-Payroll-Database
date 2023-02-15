@@ -15,3 +15,6 @@ Insert into EmployeeTable values
 ('Vikram',50000,'2019-05-23'),
 ('Rohit',60000,'2020-02-12'),
 ('Sneha',70000,'2021-03-14')
+--UC4 to view table
+
+select * from EmployeeTable
